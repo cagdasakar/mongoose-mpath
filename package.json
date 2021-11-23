@@ -1,54 +1,57 @@
 {
-  "name": "mongoose-mpath",
-  "version": "2.4.13",
-  "description": "Mongoose plugin for tree hierarchy using the materialized path pattern.",
-  "keywords": [
-    "mongoose",
-    "materialized",
-    "path",
-    "tree",
-    "mongodb"
-  ],
-  "author": "Viktor Persson",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vikpe/mongoose-mpath.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vikpe/mongoose-mpath/issues"
-  },
-  "homepage": "https://github.com/vikpe/mongoose-mpath",
-  "scripts": {
-    "test": "nyc --source-map --produce-source-map mocha --require @babel/polyfill --require @babel/register --timeout 8000 --exit",
-    "test:watch": "nyc --source-map --produce-source-map mocha --require @babel/polyfill --require @babel/register -w",
-    "coverage": "nyc report --reporter=text-lcov > lcov.info",
-    "prettier": "prettier --write \"{lib,test}/**/*.js\""
-  },
-  "main": "index.js",
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "mongoose": "^5.13.7",
-    "stream-worker": "^2.0.2"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.5",
-    "@babel/node": "^7.15.4",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/register": "^7.15.3",
-    "async": "^3.2.1",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
-    "chai": "^4.3.4",
-    "chai-subset": "^1.6.0",
-    "mkdirp": "^1.0.4",
-    "mocha": "^7.2.0",
-    "nyc": "^15.1.0",
-    "prettier": "^2.4.1",
-    "shortid": "^2.2.16",
-    "sinon": "^7.5.0",
-    "sinon-mongoose": "^2.3.0"
-  }
+    "name": "mongoose-mpath",
+    "version": "2.4.13",
+    "description": "Mongoose plugin for tree hierarchy using the materialized path pattern.",
+    "keywords": [
+        "mongoose",
+        "materialized",
+        "path",
+        "tree",
+        "mongodb"
+    ],
+    "author": "Viktor Persson",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vikpe/mongoose-mpath.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vikpe/mongoose-mpath/issues"
+    },
+    "homepage": "https://github.com/vikpe/mongoose-mpath",
+    "scripts": {
+        "test": "nyc --source-map --produce-source-map mocha --require @babel/polyfill --require @babel/register --timeout 8000 --exit",
+        "test:watch": "nyc --source-map --produce-source-map mocha --require @babel/polyfill --require @babel/register -w",
+        "coverage": "nyc report --reporter=text-lcov > lcov.info",
+        "prettier": "prettier --write \"{lib,test}/**/*.js\""
+    },
+    "main": "index.js",
+    "types": "./index.d.ts",
+    "engines": {
+        "node": ">=14"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21",
+        "mongoose": "^5.13.7"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.15.7",
+        "@babel/core": "^7.15.5",
+        "@babel/node": "^7.15.4",
+        "@babel/polyfill": "^7.12.1",
+        "@babel/preset-env": "^7.15.6",
+        "@babel/register": "^7.15.3",
+        "async": "^3.2.1",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.2.2",
+        "chai": "^4.3.4",
+        "chai-subset": "^1.6.0",
+        "mkdirp": "^1.0.4",
+        "mocha": "^7.2.0",
+        "nyc": "^15.1.0",
+        "prettier": "^2.4.1",
+        "shortid": "^2.2.16",
+        "sinon": "^7.5.0",
+        "sinon-mongoose": "^2.3.0"
+    }
 }
