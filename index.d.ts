@@ -1,4 +1,4 @@
-import {Model, ObjectId, QueryWithHelpers, Schema, Types} from "mongoose";
+import {RefType, Schema} from "mongoose";
 
 interface MPathPluginOptions {
     onDelete?: "REPARENT" | "DELETE";
@@ -6,10 +6,10 @@ interface MPathPluginOptions {
     pathSeparator?: string;
 }
 
-type TWithMaterializedPath = {
-    parent: ObjectId;
-    path: string;
-    children: Array<unknown>;
+export type WithMaterializedPath = {
+    path?: string;
+    parent?: RefType<unknown>;
+    children?: Array<unknown>;
 };
 
 declare function materializedPathPlugin(schema: Schema, options: MPathPluginOptions): void;
