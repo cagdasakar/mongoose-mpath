@@ -8,7 +8,7 @@ interface MPathPluginOptions {
 
 export type WithMaterializedPath = {
     path?: string;
-    parent?: RefType<unknown>;
+    parent?: RefType;
     children?: Array<unknown>;
 };
 
