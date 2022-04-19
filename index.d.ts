@@ -1,4 +1,4 @@
-import {RefType, Schema} from "mongoose";
+import {RefType, Schema, Document} from "mongoose";
 
 interface MPathPluginOptions {
     onDelete?: "REPARENT" | "DELETE";
@@ -8,7 +8,7 @@ interface MPathPluginOptions {
 
 export type WithMaterializedPath = {
     path?: string;
-    parent?: RefType;
+    parent?: unknown;
     children?: Array<unknown>;
 };
 
